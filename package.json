@@ -1,0 +1,29 @@
+{
+  "name": "prodigy_bd_01",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njaumatilda/PRODIGY_BD_01.git"
+  },
+  "keywords": [],
+  "author": "Matilda Njau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njaumatilda/PRODIGY_BD_01/issues"
+  },
+  "homepage": "https://github.com/njaumatilda/PRODIGY_BD_01#readme",
+  "description": "This API performs basic CRUD operations on a users resource.",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "uuid": "^13.0.0"
+  }
+}
