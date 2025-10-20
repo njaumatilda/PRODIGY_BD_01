@@ -10,7 +10,7 @@ const readAllUsers = (req, res) => {
     res.status(200).json(usersObject)
   } catch (error) {
     console.log(error)
-    res.json({
+    res.status(500).json({
       message: "Internal Server Error",
     })
   }
@@ -43,7 +43,7 @@ const readSingeleUser = (req, res) => {
     })
   } catch (error) {
     console.log(error)
-    res.json({
+    res.status(500).json({
       message: "Internal Server Error",
     })
   }
@@ -52,13 +52,13 @@ const readSingeleUser = (req, res) => {
 const createUser = (req, res) => {
   try {
     const userId = uuidV4()
-    const { name, email, age } = req.body //TODO: Validate email some more
+    const { name, email, age } = req.body 
     const usersKey = usersStorage.size + 1
 
     const schema = Joi.object({
       name: Joi.string().min(3).max(20).trim().required(),
       email: Joi.string()
-        .email({ tlds: { allow: false } })
+        .email()
         .trim()
         .required(),
       age: Joi.number().positive().required(),
@@ -147,7 +147,7 @@ const updateUser = (req, res) => {
     })
   } catch (error) {
     console.log(error)
-    res.json({
+    res.status(500).json({
       message: "Internal Server Error",
     })
   }
@@ -172,7 +172,7 @@ const deleteSingleUser = (req, res) => {
     })
   } catch (error) {
     console.log(error)
-    res.json({
+    res.status(500).json({
       message: "Internal Server Error",
     })
   }
@@ -189,7 +189,7 @@ const deleteAllUsers = (req, res) => {
     })
   } catch (error) {
     console.log(error)
-    res.json({
+    res.status(500).json({
       message: "Internal Server Error",
     })
   }

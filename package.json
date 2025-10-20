@@ -19,7 +19,7 @@
     "url": "https://github.com/njaumatilda/PRODIGY_BD_01/issues"
   },
   "homepage": "https://github.com/njaumatilda/PRODIGY_BD_01#readme",
-  "description": "This API performs basic CRUD operations on a users resource.",
+  "description": "This API performs basic CRUD operations on a user's resource.",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
